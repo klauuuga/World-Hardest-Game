@@ -14,6 +14,12 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        SetCoins(0);
+        UpdateCoinsUI();
+    }
+
     public void SetCambioEscena(GameObject go)
     {
         cambioEscena = go;
