@@ -8,17 +8,16 @@ public class Player : MonoBehaviour
     private Vector3 posicionInicial;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         textoScore = GameManager.Instance.GetScoreText();
         posicionInicial = transform.position;
         gameObject.transform.position = posicionInicial;
-        //Establece uns rotcion con grados Euler
+        //Establece uns rotacion con grados Euler
         this.gameObject.transform.rotation = Quaternion.Euler(0,0,0);
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         PlayerMovement();
@@ -38,7 +37,7 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("condicionPasada"))
         {
-            CambioEscena.Instance.LoadSceneByIndex();
+            CambioEscena.Instance.ChangeLevel();
         }
     }
 

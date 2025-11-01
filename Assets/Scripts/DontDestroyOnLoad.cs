@@ -4,16 +4,16 @@ public class DontDestroyOnLoad : MonoBehaviour
 {
     public static DontDestroyOnLoad Instance;
 
-    private void Awake()
+    private void Awake() // Esto sirve para
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }
