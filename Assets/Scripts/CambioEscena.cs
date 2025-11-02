@@ -10,7 +10,7 @@ public class CambioEscena : MonoBehaviour
         Instance = this;
     }
 
-    private void Start() //Esta es la segunda ejecución del código. Referencia esta instancia del objeto, al GameManager(es donde se administra el sistema de monedas)
+    private void Start() //Esta es la segunda ejecución del código. Referencia esta instancia del objeto, al GameManager(es donde se administra el sistema de monedas,...)
     {
         GameManager.Instance.SetCambioEscena(this.gameObject);
     }

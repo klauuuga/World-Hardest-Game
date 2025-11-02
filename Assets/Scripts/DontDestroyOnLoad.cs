@@ -4,7 +4,7 @@ public class DontDestroyOnLoad : MonoBehaviour
 {
     public static DontDestroyOnLoad Instance;
 
-    private void Awake() // Esto sirve para
+    private void Awake() 
     {
         if (Instance == null)
         {
